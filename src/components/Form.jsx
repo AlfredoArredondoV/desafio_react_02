@@ -31,7 +31,10 @@ const Form = () => {
         } else if (password === ''){
             classButton = "btn btn-primary disabled";
             statePassword = "Ingrese Contraseña";
-        } else {
+        } else if (password.length < 6){
+            classButton = "btn btn-primary disabled";
+            statePassword = "Ingrese Contraseña";
+        }else {
             classButton = "btn btn-primary disabled";
             statePassword = "Contraseña Incorrecta";
         }
